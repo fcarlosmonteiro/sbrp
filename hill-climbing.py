@@ -54,7 +54,7 @@ def check_clone(solution):
 			sol.append(1+int(99*random()))
 	return sol
 
-def fitness_function(solution):
+def objective_function(solution):
 	data = []
 	grau_depen = []
 	for i in range(len(solution)):
@@ -108,8 +108,8 @@ def hc_process(iterations):
 	while (c<iterations):
 		neighborhood=extends_neighborhood(current)
 		for sol in neighborhood[0:len(neighborhood)]:
-			fit_current=fitness_function(current)
-			fit_neighbor=fitness_function(sol)
+			fit_current=objective_function(current)
+			fit_neighbor=objective_function(sol)
 
 			#print("current solution:", current, "| fit:",str(fit_current), "| estimate/h:", sprints_capacity(current))
 			print("neighbor", sol,"| fit:",str(fit_neighbor),"| estimate/h:", sprints_capacity(current))

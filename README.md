@@ -1,1 +1,1 @@
-# SbRP - Search-based Requirements Prioritization
+# SbRP - Search-based Agile Requirements Prioritization
